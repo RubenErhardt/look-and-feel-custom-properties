@@ -1,0 +1,72 @@
+:root{
+--primary-color:white; /* achtergrond kleur */
+--secondary-color:blue;/* kleur artikel*/
+--tertiary-color:rgb(255, 2, 175); /* tekst*/
+--primary-font:"Gill Sans", sans-serif;
+--secondary-font:"cursive";
+--article-height:450px; /* hoogte artikel*/
+--img-height:250px; 
+--img-width:250px;
+--box-margin:10px;
+--box-padding:10px;
+--img-margin:15px;
+--img-border-radius:20px;
+--transform-article:translateY(20px); 
+
+}
+
+body {
+    font-family: var(--primary-font);
+    margin: 0;
+    padding: 0;
+    background-color:var(--primary-color);
+    
+}
+
+.article-container {
+    display:flex;
+    padding: 10px;
+}
+  
+/* hele kaartje*/
+.article-box1,.article-box2,.article-box3 {
+    height: var(--article-height);
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 5px var(--tertiary-color);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+/* afbeelding kaartje*/
+.article-img1,.article-img2,.article-img3{
+    width: var(--img-width);
+    height: var(--img-height);
+    border-radius:var(--img-border-radius);
+    margin-bottom: var(--img-margin);
+}
+/* plaatsing kaartje*/
+.article-details1,.article-details2,.article-details3 {
+    text-align: center;
+}
+/* welk bedrijf review*/
+.article-details1 h2,.article-details2 h2,.article-details3 h2 {
+    color: var(--tertiary-color);
+    margin-bottom: 15px;
+}
+/* wat het bedrijf zegt*/
+.article-details1 p,.article-details2 p,.article-details3 p{
+    color: var(--tertiary-color);
+}
+
+.rating-star {
+    color: #ff9d00;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* effect*/
+.article-box1:hover,.article-box2:hover,.article-box3:hover{
+    transform: var(--transform-article);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
